@@ -3,8 +3,9 @@ package com.tutorial;
 import java.util.Scanner;
 
 public class Console {
+
+    private static Scanner scanner = new Scanner(System.in);
     public static double readNumber(String prompt, double min, double max) {
-        Scanner scanner = new Scanner(System.in);
         double value;
         while (true) {
             System.out.print(prompt);
@@ -15,4 +16,11 @@ public class Console {
         }
         return value;
     }
+
+    public static double readNumber(String prompt) {
+        double value;
+        value = scanner.nextDouble();
+        return value;
+    }
+
 }
